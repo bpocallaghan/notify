@@ -12,12 +12,12 @@
         "php": ">=5.4.0"
     },
 	"autoload": {
-		"psr-0": {
+		"psr-4": {
 			"Bpocallaghan\\Notify": "src/"
 		},
 		"files": [
-			"src/Bpocallaghan/Notify/functions.php"
+			"src/functions.php"
 		]
 	},
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
