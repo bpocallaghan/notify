@@ -1,6 +1,7 @@
 {
     "name": "bpocallaghan/notify",
     "description": "Laravel 5 Flash Notifications for SmartAdmin 1.5.2 and Alert Notifications for SmartAdmin / Bootstrap 3",
+	"keywords": ["laravel", "flash", "notifications", "notify", "smartadmin", "bootstrap"],
     "license": "MIT",
     "authors": [
         {
