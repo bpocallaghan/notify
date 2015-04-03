@@ -1,0 +1,23 @@
+{
+    "name": "bpocallaghan/notify",
+    "description": "Laravel 5 Flash Notifications for SmartAdmin 1.5.2 and Alert Notifications for SmartAdmin / Bootstrap 3",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben-Piet O'Callaghan",
+            "email": "bpocallaghan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+	"autoload": {
+		"psr-0": {
+			"Bpocallaghan\\Notify": "src/"
+		},
+		"files": [
+			"src/Bpocallaghan/Notify/functions.php"
+		]
+	},
+    "minimum-stability": "stable"
+}
