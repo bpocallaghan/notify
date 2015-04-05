@@ -15,7 +15,7 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-	"bpocallaghan/notify": "~1.*"
+	"bpocallaghan/notify": "1.0.*"
 }
 ```
 
@@ -72,4 +72,4 @@ If you need to modify the partials, you can run:
 php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider"
 ```
 
-The two views will be located in the `resources/views/vendor/notify/' directory.
+The two views will be located in the 'resources/views/vendor/notify/' directory.

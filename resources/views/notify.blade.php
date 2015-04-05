@@ -1,5 +1,6 @@
 @if (Session::has('notify.title'))
 	@section('scripts')
+		@parent
 		<script type="text/javascript">
 			$(function ()
 			{
@@ -51,6 +52,7 @@
 @endif
 
 @section('scripts')
+	@parent
 	<script type="text/javascript" charset="utf-8">
 		function smallBox(title, description, color, icon)
 		{
