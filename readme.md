@@ -73,3 +73,8 @@ php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider
 ```
 
 The two views will be located in the 'resources/views/vendor/notify/' directory.
+
+## Tank you
+
+- Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
+- Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
