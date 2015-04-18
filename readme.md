@@ -39,7 +39,7 @@ And, for convenience, add a facade alias:
 
 ## Usage
 
-Within your master view file
+Within your master view file.
 
 ```html
 @include('notify::notify')
@@ -65,6 +65,9 @@ You may also do:
 - `Notify::error('title', 'description');`
 - `Notify::info('This is the title', 'content', 'smile-o', 5000);`
 - `Notify::message('title', 'description', 'smile-o', 'info', 0, 'big');`
+
+To show an overlay:
+- `Notify::overlay('This is a modal', '<strong>Lorem Ipsum</strong>');`
 
 If you need to modify the partials, you can run:
 
