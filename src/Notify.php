@@ -1,10 +1,10 @@
-<?php namespace Bpocallaghan\Notify;
+<?php
+namespace Bpocallaghan\Notify;
 
 use Illuminate\Session\Store;
 
 class Notify
 {
-
 	/**
 	 * The session writer.
 	 *
@@ -69,6 +69,19 @@ class Notify
 	public function warning($title, $content, $icon = true)
 	{
 		$this->message($title, $content, $icon, 'warning');
+	}
+
+	/**
+	 * Flash a modal
+	 *
+	 * @param $title
+	 * @param $content
+	 */
+	public function overlay($title, $content)
+	{
+		$this->session->flash('notify.overlay', true);
+		$this->session->flash('notify.title', $title);
+		$this->session->flash('notify.content', $content);
 	}
 
 	/**
