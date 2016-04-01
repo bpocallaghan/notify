@@ -1,5 +1,7 @@
 # Flash notifications + Alert notifications
 
+Busy planning on version 2 to rewrite this and include the assets or to use a 3rd party 'notify'
+
 Laravel 5 Flash Notifications for SmartAdmin 1.5.2 and Alert Notifications for SmartAdmin / Bootstrap 3
 
 ## Laravel 5 + SmartAdmin 1.5.2
