@@ -4,8 +4,6 @@ Notify alert boxes to the browser with sound and font awesome icons and give it 
 Works great to notify the user after a successfull action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
-[?IMAGE HERE?]
-
 ## Installation
 
 First, pull in the package through Composer.
@@ -38,7 +36,7 @@ Add a facade alias or use the globel helper function `notify()`.
 
 ## Usage
 
-Within any view file.
+Within any view file (preferable your master layout).
 
 ```html
 @include('notify::notify')
@@ -97,20 +95,16 @@ If you use elixer compile the css and js file, otherwise include them in your ht
 ## TODO
 
 - Provide an example
+- Maybe a config file (sound on/off, sound path, position, fade in/out, etc)
 - Cleanup code (decide on the animations.css)
-- Maybe specify the position / fade in via the settings
 - Maybe add a bigger box
 - Maybe add a 'modal' option (bootstrap's modal)
 
-## Tank you
-
-- Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
-- Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
-
 ## Note
 
-Please keep in mind this is for my personal workflow and might not help you. 
-I developed this to help speed up my day to day workflow. Thank you for understanding.
+Please keep in mind this is for my personal workflow and might not fit your need.
+I developed this to help speed up my day to day workflow. 
+Please let me know about any issues or if you have any suggestions.
 
 ## My other Packages
 
