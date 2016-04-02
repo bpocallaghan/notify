@@ -1,7 +1,7 @@
 {
     "name": "bpocallaghan/notify",
-    "description": "Laravel 5 Flash Notifications for SmartAdmin 1.5.2 and Alert Notifications for SmartAdmin / Bootstrap 3",
-	"keywords": ["laravel", "flash", "notifications", "notify", "smartadmin", "bootstrap"],
+    "description": "Laravel 5 Flash Notifications with icons and animations and with a timeout",
+	"keywords": ["laravel", "flash", "notifications", "notify", "bootstrap"],
     "license": "MIT",
     "authors": [
         {
@@ -17,8 +17,7 @@
 			"Bpocallaghan\\Notify\\": "src/"
 		},
 		"files": [
-			"src/functions.php"
+			"src/helpers.php"
 		]
-	},
-    "minimum-stability": "stable"
+	}
 }

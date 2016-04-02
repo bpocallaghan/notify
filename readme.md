@@ -1,15 +1,10 @@
-# Flash notifications + Alert notifications
+# Notify (Laravel)
 
-Busy planning on version 2 to rewrite this and include the assets or to use a 3rd party 'notify'
+Notify alert boxes to the browser with sound and font awesome icons and give it a timeout to fly out.
+Works great to notify the user after a successfull action (CRUD).
+Flash the information from Laravel or create multiple from javascript.
 
-Laravel 5 Flash Notifications for SmartAdmin 1.5.2 and Alert Notifications for SmartAdmin / Bootstrap 3
-
-## Laravel 5 + SmartAdmin 1.5.2
-
-Based on Jeffreay Way's package, this one is just optimized for smartadmin and bootstrap.
-> [laracasts/flash](https://github.com/laracasts/flash)
-
-> [Learn exactly how to build this very package on Laracasts!](https://laracasts.com/lessons/flexible-flash-messages)
+[?IMAGE HERE?]
 
 ## Installation
 
@@ -17,69 +12,107 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-	"bpocallaghan/notify": "1.0.*"
+	"bpocallaghan/notify": "2.*"
 }
 ```
+OR 
+```bash
+composer require bpocallaghan/notify
+```
 
-And then, if using Laravel 5, include the service provider within `app/config/app.php`.
+Include the service provider within `config\app.php`.
 
 ```php
 'providers' => [
-    'Bpocallaghan\Notify\NotifyServiceProvider',
-	'Bpocallaghan\Notify\NotifyAlertServiceProvider',
+	Bpocallaghan\Notify\NotifyServiceProvider::class,
 ];
 ```
 
-And, for convenience, add a facade alias:
+Add a facade alias or use the globel helper function `notify()`.
 
 ```php
 'aliases' => [
-    'Notify'      => 'Bpocallaghan\Notify\Facades\Notify',
-	'NotifyAlert' => 'Bpocallaghan\Notify\Facades\NotifyAlert',
+	'Notify' => Bpocallaghan\Notify\Facades\Notify::class,
 ];
 ```
 
 ## Usage
 
-Within your master view file.
+Within any view file.
 
 ```html
 @include('notify::notify')
-@include('notify::notify_alert')
 ```
 
-Within your controllers, before you return the view...
+Within any Controller.
 
 ```php
 public function index()
 {
-	notify('This is the title', 'content first line<br/>content second line');
+    // helper function - default to the 'info'
+	notify('Title', 'Description');
+	
+	// return object first
+	notify()->info('Title', 'Description');
+	
+	// via the facade
+    Notify::info('Title', 'Description');
 	
 	return view('home');
 }
 ```
 
-You may also do:
+The different 'levels' are:
+- `notify()->info('Title', 'Description');`
+- `notify()->success('Title', 'Description');`
+- `notify()->warning('Title', 'Description');`
+- `notify()->error('Title', 'Description');`
 
-- `Notify::info('title', 'description');`
-- `Notify::success('title', 'description');`
-- `Notify::warning('title', 'description');`
-- `Notify::error('title', 'description');`
-- `Notify::info('This is the title', 'content', 'smile-o', 5000);`
-- `Notify::message('title', 'description', 'smile-o', 'info', 0, 'big');`
+The different arguments:
+- `notify()->info('Title', 'Description', false);` // without the icon
+- `notify()->info('Title', 'Description', 'smile-o');` // specify the icon class
+- `notify()->message($level = 'info', $title, $content, $icon, $iconSmall, $timeout = 5000)` // arguments
+- `notify()->message('info', 'Title', 'Description', 'smile-o');` // specify the type of level
+- `notify()->message('info', 'Title', 'Description', 'smile-o', 'thumbs-o-up');` // show a different small icon
+- `notify()->message('info', 'Title', 'Description', 'smile-o', 'thumbs-o-up', 10000);` // specify the timeout
 
-To show an overlay:
-- `Notify::overlay('This is a modal', '<strong>Lorem Ipsum</strong>');`
-
-If you need to modify the partials, you can run:
+If you need to modify the view partial, you can run:
 
 ```bash
-php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider"
+php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider" --tag=view
 ```
 
-The two views will be located in the 'resources/views/vendor/notify/' directory.
+The view partial can be found here `resources\views\vendor\notify\notify.blade`.
+
+You need to publish the assets.
+
+```bash
+php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider" --tag=public
+```
+
+Find the files here `public\vendor\notify\`.
+Copy the mp3s to `public\sounds\`.
+If you use elixer compile the css and js file, otherwise include them in your html header.
+
+## TODO
+
+- Provide an example
+- Cleanup code (decide on the animations.css)
+- Maybe specify the position / fade in via the settings
+- Maybe add a bigger box
+- Maybe add a 'modal' option (bootstrap's modal)
 
 ## Tank you
 
 - Thank you [Jeffrey Way](https://github.com/JeffreyWay) for the awesome resources at [Laracasts](https://laracasts.com/).
 - Thank you [Taylor Ottwell](https://github.com/taylorotwell) for [Laravel](http://laravel.com/).
+
+## Note
+
+Please keep in mind this is for my personal workflow and might not help you. 
+I developed this to help speed up my day to day workflow. Thank you for understanding.
+
+## My other Packages
+
+- [Flash a bootstrap alert](https://github.com/bpocallaghan/alert)
+- [Laravel custom Generate Files with a config file and publishable stubs](https://github.com/bpocallaghan/generators)

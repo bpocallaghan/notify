@@ -1,42 +1,38 @@
-<?php namespace Bpocallaghan\Notify;
+<?php
+
+namespace Bpocallaghan\Notify;
 
 use Illuminate\Support\ServiceProvider;
 
 class NotifyServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'notify');
 
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = false;
+        $this->publishes([
+            __DIR__ . '/../resources/views' => base_path('resources/views/vendor/notify')
+        ], 'view');
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		$this->app->bind('notify', function ()
-		{
-			return $this->app->make('Bpocallaghan\Notify\Notify');
-		});
-	}
+        $this->publishes([
+            __DIR__ . '/../resources/assets' => public_path('vendor/notify'),
+        ], 'public');
+    }
 
-	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->loadViewsFrom(__DIR__ . '/../resources/views', 'notify');
-
-		$this->publishes([
-			__DIR__ . '/../resources/views' => base_path('resources/views/vendor/notify')
-		]);
-	}
-
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->bind('notify', function () {
+            return $this->app->make('Bpocallaghan\Notify\Notify');
+        });
+    }
 }
