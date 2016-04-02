@@ -4,8 +4,6 @@ Notify alert boxes to the browser with sound and font awesome icons and give it 
 Works great to notify the user after a successfull action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
-![Notify Image](https://www.dropbox.com/s/57c76u891i5tmsp/notify.png?dl=0)
-
 ## Installation
 
 First, pull in the package through Composer.
