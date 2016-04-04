@@ -4,6 +4,9 @@ Notify alert boxes to the browser with sound and font awesome icons and give it 
 Works great to notify the user after a successfull action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
+###Want to see the current package in action, have a look at my starter project.
+####[Laravel Starter Project](https://github.com/bpocallaghan/laravel-admin-starter)
+
 ## Installation
 
 First, pull in the package through Composer.
