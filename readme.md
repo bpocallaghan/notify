@@ -89,8 +89,8 @@ php artisan vendor:publish --provider="Bpocallaghan\Notify\NotifyServiceProvider
 ```
 
 Find the files here `public\vendor\notify\`.
-Copy the mp3s to `public\sounds\`.
-If you use elixer compile the css and js file, otherwise include them in your html header.
+Move the mp3s to `public\sounds\`.
+If you use Laravel Elixir, move the css and js to your `resource\assets` and include them in your gulpfile.js, otherwise link to the individual files in your html header.
 
 ## TODO
 
