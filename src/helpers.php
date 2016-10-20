@@ -38,7 +38,7 @@ if (!function_exists('notify_icon')) {
                 return 'warning shake';
                 break;
             case 'success':
-                return 'thumbs-o-up bounce';
+                return 'smile-o bounce';
                 break;
             default: // info / default
                 return 'bell shake';
@@ -58,16 +58,16 @@ if (!function_exists('notify_icon_small')) {
     {
         switch ($level) {
             case 'danger':
-                return 'thumbs-o-down spin';
+                return 'times spin';
                 break;
             case 'warning':
                 return 'times-circle-o spin';
                 break;
             case 'success':
-                return 'thumbs-o-up bounce';
+                return 'smile-o bounce';
                 break;
             default: // info / default
-                return 'smile-o spin';
+                return 'bell spin';
                 break;
         }
     }
