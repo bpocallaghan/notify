@@ -97,7 +97,6 @@ If you use Laravel Elixir, move the css and js to your `resource\assets` and inc
 
 ## TODO
 
-- Provide an example
 - Maybe a config file (sound on/off, sound path, position, fade in/out, etc)
 - Cleanup code (decide on the animations.css)
 - Maybe add a bigger box
