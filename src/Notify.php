@@ -62,6 +62,19 @@ class Notify
     }
 
     /**
+     * Flash an danger notification
+     *
+     * @param             $title
+     * @param             $content
+     * @param bool|string $icon
+     * @param bool|string $iconSmall
+     */
+    public function danger($title, $content, $icon = true, $iconSmall = true)
+    {
+        $this->message('danger', $title, $content, $icon, $iconSmall);
+    }
+
+    /**
      * Flash a warning notification
      *
      * @param             $title
