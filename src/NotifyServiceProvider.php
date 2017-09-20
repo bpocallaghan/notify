@@ -31,8 +31,8 @@ class NotifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('notify', function () {
-            return $this->app->make('Bpocallaghan\Notify\Notify');
+        $this->app->singleton('notify', function () {
+            return $this->app->make(Notify::class);
         });
     }
 }

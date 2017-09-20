@@ -13,7 +13,7 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-	"bpocallaghan/notify": "2.*"
+    "bpocallaghan/notify": "2.*"
 }
 ```
 OR 
@@ -21,11 +21,12 @@ OR
 composer require bpocallaghan/notify
 ```
 
+### Laravel <5.4 only (Laravel 5.5 has automatic package discovery)
 Include the service provider within `config\app.php`.
 
 ```php
 'providers' => [
-	Bpocallaghan\Notify\NotifyServiceProvider::class,
+    Bpocallaghan\Notify\NotifyServiceProvider::class,
 ];
 ```
 
@@ -33,7 +34,7 @@ Add a facade alias or use the globel helper function `notify()`.
 
 ```php
 'aliases' => [
-	'Notify' => Bpocallaghan\Notify\Facades\Notify::class,
+    'Notify' => Bpocallaghan\Notify\Facades\Notify::class,
 ];
 ```
 
@@ -51,15 +52,15 @@ Within any Controller.
 public function index()
 {
     // helper function - default to the 'info'
-	notify('Title', 'Description');
-	
-	// return object first
-	notify()->info('Title', 'Description');
-	
-	// via the facade
+    notify('Title', 'Description');
+    
+    // return object first
+    notify()->info('Title', 'Description');
+    
+    // via the facade
     Notify::info('Title', 'Description');
-	
-	return view('home');
+    
+    return view('home');
 }
 ```
 
