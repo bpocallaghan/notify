@@ -10,11 +10,11 @@
                     level: "{{ session('notify.level') }}",
 
                     @if (session('notify.icon'))
-                        icon: "fa fa-{{ session('notify.icon') }}",
+                        icon: "{{ session('notify.icon') }}",
                     @endif
 
                     @if (session('notify.iconSmall'))
-                        iconSmall: "fa fa-{{ session('notify.iconSmall') }}",
+                        iconSmall: "{{ session('notify.iconSmall') }}",
                     @endif
 
                     @if (session('notify.timeout'))

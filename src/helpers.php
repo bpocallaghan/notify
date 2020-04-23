@@ -32,16 +32,16 @@ if (!function_exists('notify_icon')) {
     {
         switch ($level) {
             case 'danger':
-                return 'times shake';
+                return 'fas fa-times shake';
                 break;
             case 'warning':
-                return 'warning shake';
+                return 'fas fa-warning shake';
                 break;
             case 'success':
-                return 'smile-o bounce';
+                return 'far fa-smile bounce';
                 break;
             default: // info / default
-                return 'bell shake';
+                return 'fas fa-bell shake';
                 break;
         }
     }
@@ -58,16 +58,16 @@ if (!function_exists('notify_icon_small')) {
     {
         switch ($level) {
             case 'danger':
-                return 'times spin';
+                return 'fas fa-times spin';
                 break;
             case 'warning':
-                return 'times-circle-o spin';
+                return 'fas fa-times-circle spin';
                 break;
             case 'success':
-                return 'smile-o bounce';
+                return 'far fa-smile bounce';
                 break;
             default: // info / default
-                return 'bell spin';
+                return 'fas fa-bell spin';
                 break;
         }
     }
