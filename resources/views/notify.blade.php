@@ -13,10 +13,6 @@
                         icon: "{{ session('notify.icon') }}",
                     @endif
 
-                    @if (session('notify.iconSmall'))
-                        iconSmall: "{{ session('notify.iconSmall') }}",
-                    @endif
-
                     @if (session('notify.timeout'))
                         timeout: {{ session('notify.timeout') }},
                     @endif
