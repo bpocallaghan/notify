@@ -32,16 +32,16 @@ if (!function_exists('notify_icon')) {
     {
         switch ($level) {
             case 'danger':
-                return 'fas fa-times shake';
+                return 'fas fa-fw fa-times shake';
                 break;
             case 'warning':
-                return 'fas fa-warning shake';
+                return 'fas fa-fw fa-warning shake';
                 break;
             case 'success':
-                return 'far fa-smile bounce';
+                return 'far fa-fw fa-smile bounce';
                 break;
             default: // info / default
-                return 'fas fa-bell shake';
+                return 'fas fa-fw fa-bell shake';
                 break;
         }
     }
