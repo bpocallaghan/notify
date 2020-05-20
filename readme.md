@@ -4,8 +4,8 @@ Notify alert boxes to the browser with sound and font awesome icons and give it 
 Works great to notify the user after a successfull action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
-###Want to see the current package in action, have a look at my starter project.
-####[Laravel Starter Project](https://github.com/bpocallaghan/laravel-admin-starter)
+### Want to see the current package in action, have a look at the project.
+#### [Laravel Starter Project](https://github.com/bpocallaghan/titan-starter)
 
 ## Installation
 
@@ -13,7 +13,7 @@ First, pull in the package through Composer.
 
 ```js
 "require": {
-    "bpocallaghan/notify": "2.*"
+    "bpocallaghan/notify": "3.*"
 }
 ```
 OR 
@@ -73,10 +73,9 @@ The different 'levels' are:
 The different arguments:
 - `notify()->info('Title', 'Description', false);` // without the icon
 - `notify()->info('Title', 'Description', 'smile-o');` // specify the icon class
-- `notify()->message($level = 'info', $title, $content, $icon, $iconSmall, $timeout = 5000)` // arguments
+- `notify()->message($level = 'info', $title, $content, $icon, $timeout = 5000)` // arguments
 - `notify()->message('info', 'Title', 'Description', 'smile-o');` // specify the type of level
-- `notify()->message('info', 'Title', 'Description', 'smile-o', 'thumbs-o-up');` // show a different small icon
-- `notify()->message('info', 'Title', 'Description', 'smile-o', 'thumbs-o-up', 10000);` // specify the timeout
+- `notify()->message('info', 'Title', 'Description', 'smile-o', 10000);` // specify the timeout
 
 If you need to modify the view partial, you can run:
 
@@ -97,11 +96,7 @@ Move the mp3s to `public\sounds\`.
 If you use Laravel Elixir, move the css and js to your `resource\assets` and include them in your gulpfile.js, otherwise link to the individual files in your html header.
 
 ## TODO
-
 - Maybe a config file (sound on/off, sound path, position, fade in/out, etc)
-- Cleanup code (decide on the animations.css)
-- Maybe add a bigger box
-- Maybe add a 'modal' option (bootstrap's modal)
 
 ## Note
 
