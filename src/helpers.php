@@ -46,29 +46,3 @@ if (!function_exists('notify_icon')) {
         }
     }
 }
-
-if (!function_exists('notify_icon_small')) {
-    /**
-     * Get the icon for the notify level
-     *
-     * @param $level
-     * @return string
-     */
-    function notify_icon_small($level)
-    {
-        switch ($level) {
-            case 'danger':
-                return 'fas fa-times spin';
-                break;
-            case 'warning':
-                return 'fas fa-times-circle spin';
-                break;
-            case 'success':
-                return 'far fa-smile bounce';
-                break;
-            default: // info / default
-                return 'fas fa-bell spin';
-                break;
-        }
-    }
-}
