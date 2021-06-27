@@ -91,13 +91,7 @@ class Notify
      * @param bool|string $icon
      * @param int         $timeout
      */
-    public function message(
-        $level = 'info',
-        $title,
-        $content,
-        $icon,
-        $timeout = 5000
-    ) {
+    public function message($level, $title, $content, $icon, $timeout = 5000) {
         $this->session->flash('notify.level', $level);
         $this->session->flash('notify.title', $title);
         $this->session->flash('notify.content', $content);
