@@ -95,9 +95,6 @@ Find the files here `public\vendor\notify\`.
 Move the mp3s to `public\sounds\`.
 If you use Laravel Elixir, move the css and js to your `resource\assets` and include them in your gulpfile.js, otherwise link to the individual files in your html header.
 
-## TODO
-- Maybe a config file (sound on/off, sound path, position, fade in/out, etc)
-
 ## Note
 
 Please keep in mind this is for my personal workflow and might not fit your need.
