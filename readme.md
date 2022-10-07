@@ -95,12 +95,6 @@ Find the files here `public\vendor\notify\`.
 Move the mp3s to `public\sounds\`.
 If you use Laravel Elixir, move the css and js to your `resource\assets` and include them in your gulpfile.js, otherwise link to the individual files in your html header.
 
-## Note
-
-Please keep in mind this is for my personal workflow and might not fit your need.
-I developed this to help speed up my day to day workflow. 
-Please let me know about any issues or if you have any suggestions.
-
 ## My other Packages
 
 - [Flash a bootstrap alert](https://github.com/bpocallaghan/alert)
