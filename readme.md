@@ -7,7 +7,7 @@ Flash the information from Laravel or create multiple from javascript.
 ### Want to see the current package in action, have a look at the project.
 #### [Laravel Starter Project](https://github.com/bpocallaghan/titan-starter-website)
 
-## Installation
+## Documentation, Installation, and Usage Instructions
 
 First, pull in the package through Composer.
 
@@ -20,6 +20,7 @@ OR
 ```bash
 composer require bpocallaghan/notify
 ```
+See the [documentation](DETAILED_INSTALLATION.md) for detailed installation and usage instructions.
 
 ### Laravel <5.4 only (Laravel 5.5 has automatic package discovery)
 Include the service provider within `config\app.php`.
