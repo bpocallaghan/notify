@@ -5,7 +5,7 @@ Works great to notify the user after a successfull action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
 ### Want to see the current package in action, have a look at the project.
-#### [Laravel Starter Project](https://github.com/bpocallaghan/titan-starter-website)
+#### [Laravel Starter Project (CMS)](https://github.com/bpocallaghan/titan-starter-website)
 
 ## Documentation, Installation, and Usage Instructions
 
