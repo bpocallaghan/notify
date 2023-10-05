@@ -1,7 +1,7 @@
 # Notify (Laravel)
 
 Notify alert boxes to the browser with sound and font awesome icons and give it a timeout to fly out.
-Works great to notify the user after a successfull action (CRUD).
+Works great to notify the user after a successful action (CRUD).
 Flash the information from Laravel or create multiple from javascript.
 
 ### Want to see the current package in action, have a look at the project.
